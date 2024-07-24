@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} GI</title>
+    <link href="{{url_for('static', filename='styles/style.css')}}" rel="stylesheet" />
+    <script src="{{ url_for('static', filename='styles/script.js') }}"></script>
+</head>
+
+<body>
+    <h1>Glycemic information:</h1>
+    <h2>{{ title }}</h2>
+    <p>Glycemic index is {{ GI }} </p>
+    <p>Glycemic load for an average carb proportion of {{ Carb }}g is {{ GL }} </p>
+
+
+
+    <form action="/GI">
+        <input type="text" name="Food" id="Food" placeholder="Enter a Food" autocomplete="off" list="foodList"/>
+        <ul id="suggestions"></ul>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

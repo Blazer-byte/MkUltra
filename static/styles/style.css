@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2rem;
+    background-color: #1e1960;
+    color: whitesmoke;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    font-size: 2rem;
+}
+
+input, button {
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+#suggestions {
+    position: absolute;
+    width: calc(100% - 20px); /* Subtract padding */
+    max-height: 200px; /* Limit height */
+    overflow-y: auto; /* Enable vertical scroll */
+    background-color: #333333;
+    border: 1px solid #ccc;
+    border-top: none;
+    z-index: 1;
+}

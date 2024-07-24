@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get GI info</title>
+    <link href="{{url_for('static', filename='styles/style.css')}}" rel="stylesheet" />
+    <script src="{{ url_for('static', filename='styles/script.js') }}"></script>
+</head>
+
+<body>
+    <h1>Get GI info</h1>
+    <form action="/GI">
+        <input type="text" name="Food" id="Food" placeholder="Enter a food" autocomplete="off" list="foodList"/>
+        <ul id="suggestions"></ul>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
